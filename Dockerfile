@@ -28,8 +28,6 @@ RUN /cmd-install.sh -q
 RUN npm install noide -g 
 
 
-# Add supervisord conf
-ADD /etc/supervisor/conf.d/
 
 # ------------------------------------------------------------------------------
 # Add volumes
