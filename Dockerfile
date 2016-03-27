@@ -27,7 +27,8 @@ RUN /cmd-install.sh -q
 # -----------------------------------------------------------------------------
 RUN npm install noide -g 
 
-
+# -----------------------------------------------------------------------------
+RUN npm install tty.js -g
 
 # ------------------------------------------------------------------------------
 # Add volumes
@@ -35,7 +36,8 @@ RUN mkdir /workspace
 VOLUME /workspace
 WORKDIR /workspace
 
-ENTRYPOINT ["noide", "-f"]
+RUN noide -f
+# ENTRYPOINT ["noide", "-f"]
 
 # ------------------------------------------------------------------------------
 # Clean up APT when done.
