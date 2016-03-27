@@ -25,10 +25,14 @@ RUN /cmd-install.sh -q
 
 
 # -----------------------------------------------------------------------------
-RUN npm install noide -g 
+RUN mkdir /webterminal
+WORKDIR /webterminal
+RUN npm install tty.js
+
 
 # -----------------------------------------------------------------------------
-RUN npm install tty.js -g
+RUN npm install noide -g 
+
 
 # ------------------------------------------------------------------------------
 # Add volumes
